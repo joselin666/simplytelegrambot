@@ -48,7 +48,7 @@ fi
 
 date
 echo -e "\nService Started... Waiting for new messages\n"
-/root/telegram/notificararranque.sh
+curl -s -X POST https://api.telegram.org/bot"$BOT"/sendMessage -d chat_id="$CHAT" -d text="Raspberry Telegram Interface Started." >> /var/log/telegram.log 2>> /var/log/telegram.log
 
 while true; do
 	MSGOUTPUT=$(curl -s "https://api.telegram.org/bot${TOKEN}/getUpdates")
