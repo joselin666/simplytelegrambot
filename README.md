@@ -1,2 +1,3 @@
 # simplytelegrambot
-Simply Telegram Bot for Raspberry Pi 4 Debian 11
+Simply Telegram Bot for Raspberry Pi 4
+Developep 100% Bash in Debian 11
