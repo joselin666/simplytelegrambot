@@ -1,0 +1,2 @@
+#Add this line in the root crontab
+@reboot /root/telegram/interface.sh > /var/log/interface.log 2>&1 &
