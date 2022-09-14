@@ -6,7 +6,7 @@ cd $DIRBASE
 echo "$DIRBASE"
 
 # Raspberry Simply Telegram Interface
-VERSION="1.15\nTelegram Bot for Raspberry by joselin666"
+VERSION="1.20\nTelegram Bot for Raspberry by joselin666"
 
 # Enter your token
 TOKEN="$(cat $DIRBASE/BOT)"
@@ -51,7 +51,7 @@ fi
 
 date
 echo -e "\nService Started... Waiting for new messages\n"
-curl -s -X POST https://api.telegram.org/bot"$TOKEN"/sendMessage -d chat_id="$CHAT" -d text="Raspberry Telegram Interface Started." >>/var/log/telegram.log 2>>/var/log/telegram.log
+curl -s -X POST https://api.telegram.org/bot"$TOKEN"/sendMessage -d chat_id="$CHANNEL" -d text="Raspberry Telegram Interface Started." >>/var/log/telegram.log 2>>/var/log/telegram.log
 
 while true; do
 	MSGOUTPUT=$(curl -s "https://api.telegram.org/bot${TOKEN}/getUpdates")
